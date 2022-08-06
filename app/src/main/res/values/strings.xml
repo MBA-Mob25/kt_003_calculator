@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Preço do Combustível</string>
+    <string name="main_title">Álcool ou Gasolina?</string>
+    <string name="main_sub_title">Melhor opção para seu carro flex!</string>
+    <string name="input_alcohol_hint">Preço do Álcool: R$ 3,70</string>
+    <string name="input_gas_hint">Preço da Gasolina: R$ 5,10</string>
+    <string name="btn_calculate">Calcular</string>
+    <string name="response_empty">Nenhuma opção selecionada</string>
+    <string name="response_best_alcohol">Melhor opção é abastecer com Álcool</string>
+    <string name="response_best_gas">Melhor opção é abastecer com Gasolina</string>
+    <string name="dc_icon_gas">Ícone de bomda de Combustível</string>
+    <string name="error_invalid_fields">Preencha os valores primeiro!</string>
+</resources>
