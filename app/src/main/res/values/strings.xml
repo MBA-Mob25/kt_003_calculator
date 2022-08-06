@@ -1,13 +1,13 @@
 <resources>
-    <string name="app_name">Preço do Combustível</string>
-    <string name="main_title">Álcool ou Gasolina?</string>
-    <string name="main_sub_title">Melhor opção para seu carro flex!</string>
-    <string name="input_alcohol_hint">Preço do Álcool: R$ 3,70</string>
-    <string name="input_gas_hint">Preço da Gasolina: R$ 5,10</string>
-    <string name="btn_calculate">Calcular</string>
-    <string name="response_empty">Nenhuma opção selecionada</string>
-    <string name="response_best_alcohol">Melhor opção é abastecer com Álcool</string>
-    <string name="response_best_gas">Melhor opção é abastecer com Gasolina</string>
-    <string name="dc_icon_gas">Ícone de bomda de Combustível</string>
-    <string name="error_invalid_fields">Preencha os valores primeiro!</string>
+    <string name="app_name">Calcular Área</string>
+    <string name="main_title">Qual minha área?</string>
+
+    <string name="input_hint_width">Altura Ex: 4.45</string>
+    <string name="input_hint_height">Largura Ex: 2.12</string>
+    <string name="btn_submit">Calcular</string>
+
+    <string name="error_empty">Preecha todos os valores</string>
+    <string name="result_area">Sua área é</string>
+
+    <string name="dc_icon_area">Ícone referenciando uma área</string>
 </resources>

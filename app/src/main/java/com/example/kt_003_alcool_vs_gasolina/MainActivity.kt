@@ -12,32 +12,29 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun calculate(view: View) {
-        val priceAlcohol = input_alcohol.text.toString()
-        val priceGas = input_gas.text.toString()
+        val height = inputHeight.text.toString()
+        val width = inputWidth.text.toString()
 
-        if (checkValues(priceAlcohol, priceGas)) {
-            return makeBestPrice(priceAlcohol, priceGas)
+        if (checkValues(height, width)) {
+            return makeArea(height, width)
         }
-
-        text_result.text = getString(R.string.error_invalid_fields)
+        errorView.text = getString(R.string.error_empty)
+        resultView.text = ""
     }
 
-    private fun checkValues(priceAlcohol: String, priceGas: String): Boolean {
-        if (priceAlcohol.isEmpty() || priceAlcohol.isBlank()) return false
-        if (priceGas.isEmpty() || priceGas.isBlank()) return false
+    private fun checkValues(height: String, width: String): Boolean {
+        if (height.isEmpty() || height.isBlank()) return false
+        if (width.isEmpty() || width.isBlank()) return false
         return true
     }
 
-    private fun makeBestPrice(priceAlcohol: String, priceGas: String) {
-        val priceAlcoholDoubled = priceAlcohol.toDouble()
-        val priceGasDoubled = priceGas.toDouble()
+    private fun makeArea(height: String, width: String) {
+        val height = height.toDouble()
+        val width = width.toDouble()
 
-        val result = priceAlcoholDoubled / priceGasDoubled
+        val result = height * width
 
-        if (result >= 0.7) {
-            text_result.text = getString(R.string.response_best_gas)
-        } else {
-            text_result.text = getString(R.string.response_best_alcohol)
-        }
+        errorView.text = ""
+        resultView.text = "${getString(R.string.result_area)} ${result.toInt()}m²";
     }
 }
