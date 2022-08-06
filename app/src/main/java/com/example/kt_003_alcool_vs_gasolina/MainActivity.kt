@@ -3,6 +3,7 @@ package com.example.kt_003_alcool_vs_gasolina
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.kt_003_alcool_vs_gasolina.utils.Utils
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +20,8 @@ class MainActivity : AppCompatActivity() {
 
         // Estamos executando a função de verificação dos dados preenchidos
         if (checkValues(height, width)) {
+            // Aqui vamos esconder o teclado aberto para o usuário ter a visibilidade completa da tela
+            Utils.hideSoftKeyBoard(this@MainActivity, view)
             // Com os dados verificados, vamos executar o calculo
             return makeArea(height, width)
         }
@@ -50,4 +53,5 @@ class MainActivity : AppCompatActivity() {
         errorView.text = ""
         resultView.text = "${getString(R.string.result_area)} ${result.toInt()}m²";
     }
+
 }

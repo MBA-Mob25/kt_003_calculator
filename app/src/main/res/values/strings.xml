@@ -2,8 +2,8 @@
     <string name="app_name">Calcular Área</string>
     <string name="main_title">Qual minha área?</string>
 
-    <string name="input_hint_width">Altura Ex: 4.45</string>
-    <string name="input_hint_height">Largura Ex: 2.12</string>
+    <string name="input_hint_width">Altura</string>
+    <string name="input_hint_height">Largura</string>
     <string name="btn_submit">Calcular</string>
 
     <string name="error_empty">Preecha todos os valores</string>
