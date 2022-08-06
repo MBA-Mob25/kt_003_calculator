@@ -15,15 +15,16 @@ class MainActivity : AppCompatActivity() {
     // Esta função é responsável por calcular a área
     fun calculate(view: View) {
         // Estamos recebendo os valores preenchidos pelo usuário
+        val name = inputName.text.toString()
         val height = inputHeight.text.toString()
         val width = inputWidth.text.toString()
 
         // Estamos executando a função de verificação dos dados preenchidos
-        if (checkValues(height, width)) {
+        if (checkValues(name, height, width)) {
             // Aqui vamos esconder o teclado aberto para o usuário ter a visibilidade completa da tela
             Utils.hideSoftKeyBoard(this@MainActivity, view)
             // Com os dados verificados, vamos executar o calculo
-            return makeArea(height, width)
+            return makeArea(name, height, width)
         }
 
         // Quando não entrar na condicional da verificação dos dados
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Este método é responsável por verificar se os dados foram preenchidos pelo usuário
-    private fun checkValues(height: String, width: String): Boolean {
+    private fun checkValues(name: String, height: String, width: String): Boolean {
         // Estamos utilizando validadores nativos do Kotlin para garantir que os valores não são vazios
         if (height.isEmpty() || height.isBlank()) return false
         if (width.isEmpty() || width.isBlank()) return false
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Este método irá de fato calcular a área
-    private fun makeArea(height: String, width: String) {
+    private fun makeArea(name: String, height: String, width: String) {
         // Estamos convertendo os valores para Double
         val height = height.toDouble()
         val width = width.toDouble()
@@ -51,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
         // Estamos resetando a mensagem de erro e exibindo o resultado da área fina
         errorView.text = ""
-        resultView.text = "${getString(R.string.result_area)} ${result.toInt()}m²";
+        resultView.text = "$name, ${getString(R.string.result_area)} ${result.toInt()}m²";
     }
 
 }
